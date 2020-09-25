@@ -1,0 +1,94 @@
+body {
+  background: #f8f7f7;
+}
+
+button {
+  border: 1px solid #000;
+}
+
+#main {
+  width: 250px;
+  margin: 0 auto;
+}
+
+#resultWrapper {
+  background: #2c3e50;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+}
+
+#result {
+  background: #fff;
+  font-size: 25px;
+  color: #000;
+  text-align: right;
+  height: 30px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+#numbers {
+  width: 190px;
+  background: #95a5a6;
+  float: left;
+}
+
+#numbers .num {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+
+#operators {
+  background: #7f8c8d;
+  width: 60px;
+  float: left;
+}
+
+#operators .operator {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+
+#resultOperators {
+  width: 250px;
+  background: #34495e;
+}
+
+#resultOperators .resultOperator {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+
+#equation {
+  width: 175px !important;
+  margin-right: 0px;
+}
+
+.clear {
+  clear: both;
+}
+
+.rgb {
+  color: #fff;
+  -webkit-animation: rgbAnimation 2s alternate infinite;
+  transition: all 2s ease;
+}
+
+@-webkit-keyframes rgbAnimation {
+  0% {
+    background: red;
+  }
+
+  50% {
+    background: green;
+  }
+
+  100% {
+    background: blue;
+  }
+}
