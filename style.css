@@ -1,94 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
 body {
-  background: #f8f7f7;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #9796f0, #fbc7d4);
 }
 
-button {
-  border: 1px solid #000;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    justify-content: center;
+    align-content: center;
+    /* min-height: 100vh; */
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    gap: 1px 1px;
+    grid-template-areas:
+      "result result result result"
+      "AC AC DEL div"
+      "A1 A2 A3 multip"
+      "A4 A5 A6 add"
+      "A7 A8 A9 subt"
+      "dot A0 equals equals";
+}
+.grid-container > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+  
+  .grid-container > button:hover{
+    background-color: rgba(255, 255, 255, .9);
 }
 
-#main {
-  width: 250px;
-  margin: 0 auto;
+.result {
+    grid-area: result;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
-#resultWrapper {
-  background: #2c3e50;
-  width: 100%;
-  height: 50px;
-  overflow: hidden;
+.first_line{
+    font-size: 1.5rem;
+    color: #ffffffBF;
+}
+  
+  .second_line{
+    color: white;
+    font-size: 2.5rem;
 }
 
-#result {
-  background: #fff;
-  font-size: 25px;
-  color: #000;
-  text-align: right;
-  height: 30px;
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 10px;
-}
-
-#numbers {
-  width: 190px;
-  background: #95a5a6;
-  float: left;
-}
-
-#numbers .num {
-  width: 50px;
-  height: 50px;
-  margin: 5px;
-}
-
-#operators {
-  background: #7f8c8d;
-  width: 60px;
-  float: left;
-}
-
-#operators .operator {
-  width: 50px;
-  height: 50px;
-  margin: 5px;
-}
-
-#resultOperators {
-  width: 250px;
-  background: #34495e;
-}
-
-#resultOperators .resultOperator {
-  width: 50px;
-  height: 50px;
-  margin: 5px;
-}
-
-#equation {
-  width: 175px !important;
-  margin-right: 0px;
-}
-
-.clear {
-  clear: both;
-}
-
-.rgb {
-  color: #fff;
-  -webkit-animation: rgbAnimation 2s alternate infinite;
-  transition: all 2s ease;
-}
-
-@-webkit-keyframes rgbAnimation {
-  0% {
-    background: red;
+#AC {
+    grid-area: AC;
   }
-
-  50% {
-    background: green;
+  #DEL {
+    grid-area: DEL;
   }
-
-  100% {
-    background: blue;
+  #div {
+    grid-area: div;
   }
-}
+  #A1 {
+    grid-area: A1;
+  }
+  #A2 {
+    grid-area: A2;
+  }
+  #A3 {
+    grid-area: A3;
+  }
+  #multip {
+    grid-area: multip;
+  }
+  #A4 {
+    grid-area: A4;
+  }
+  #A5 {
+    grid-area: A5;
+  }
+  #A6 {
+    grid-area: A6;
+  }
+  #add {
+    grid-area: add;
+  }
+  #A7 {
+    grid-area: A7;
+  }
+  #A8 {
+    grid-area: A8;
+  }
+  #A9 {
+    grid-area: A9;
+  }
+  #subt {
+    grid-area: subt;
+  }
+  #dot {
+    grid-area: dot;
+  }
+  #A0 {
+    grid-area: A0;
+  }
+  #equals {
+    grid-area: equals;
+  }
