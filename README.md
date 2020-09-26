@@ -1,7 +1,7 @@
 # Project-006 : Calculator (JS-02)
 
 ## Description
-Project aims to create a calculator.
+https://gulinmerve.github.io/JS-Basic-Calculator/
 
 ## Problem Statement
 
